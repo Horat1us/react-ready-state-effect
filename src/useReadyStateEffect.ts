@@ -1,11 +1,17 @@
-import { DependencyList, EffectCallback, useEffect } from "react";
+import { EffectCallback, useEffect } from "react";
 import { isReadyStateMatch } from "./isReadyStateMatch";
 import { ExpectedReadyState } from "./ExpectedReadyState";
 
-export const useReadyStateEffect = (
+export type useReadyStateEffect = (
     effect: EffectCallback,
-    deps: DependencyList = [],
-    expectedReadyState: ExpectedReadyState = "complete"
+    deps?: any[],
+    onState?: ExpectedReadyState
+) => void;
+
+export const useReadyStateEffect: useReadyStateEffect = (
+    effect,
+    deps = [],
+    onState = "complete"
 ): void => {
     useEffect(() => {
         const destructors: Array<() => void> = [
@@ -13,7 +19,7 @@ export const useReadyStateEffect = (
         ];
 
         const listener = () => {
-            if (!isReadyStateMatch(expectedReadyState)) {
+            if (!isReadyStateMatch(onState)) {
                 return;
             }
             const destructor = effect();
@@ -26,5 +32,5 @@ export const useReadyStateEffect = (
         document.addEventListener("readystatechange", listener);
 
         return () => destructors.forEach((d) => d());
-    }, [deps]);
+    }, [ deps ]);
 };
