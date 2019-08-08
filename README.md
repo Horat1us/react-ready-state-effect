@@ -8,7 +8,7 @@ Simple React Effect Hook that execute callback in case current document.readySta
 ## Installation
 Using [npm](https://npmjs.com/package/react-ready-state-effect)
 ```bash
-npm i --save
+npm i react-ready-state-effect
 ```
 
 ## Example
