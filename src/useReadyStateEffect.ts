@@ -32,5 +32,5 @@ export const useReadyStateEffect: useReadyStateEffect = (
         document.addEventListener("readystatechange", listener);
 
         return () => destructors.forEach((d) => d());
-    }, [ deps ]);
+    }, deps);
 };
