@@ -1,6 +1,6 @@
 {
   "name": "react-ready-state-effect",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "React Effect Hook based on document.readyState",
   "main": "dist/ready-state-effect.cjs.js",
   "module": "dist/ready-state-effect.esm.js",
