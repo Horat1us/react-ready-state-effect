@@ -1,6 +1,6 @@
-import babel from "rollup-plugin-babel";
-import resolve from "rollup-plugin-node-resolve";
-import pkg from './package.json';
+import babel from "@rollup/plugin-babel";
+import resolve from "@rollup/plugin-node-resolve";
+import pkg from './package.json' with {type: "json"};
 
 const extensions = [".ts", ".tsx",];
 
@@ -12,7 +12,7 @@ export default [{
     ],
     plugins: [
         resolve({
-            dedupe: [ 'react', ],
+            dedupe: ['react',],
             extensions,
         }),
         babel({
@@ -21,7 +21,7 @@ export default [{
         }),
     ],
     output: [
-        { file: pkg.main, format: 'cjs' },
-        { file: pkg.module, format: 'es' }
+        {file: pkg.main, format: 'cjs'},
+        {file: pkg.module, format: 'es'}
     ]
 }];

@@ -33,21 +33,21 @@
   },
   "homepage": "https://github.com/wHorat1us/react-ready-state-effect#readme",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/plugin-proposal-class-properties": "^7.5.5",
-    "@babel/plugin-proposal-object-rest-spread": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
-    "@babel/preset-typescript": "^7.3.3",
-    "@types/react": "^16.8.25",
-    "react": "^16.8.6",
-    "rollup": "^1.18.0",
-    "rollup-plugin-babel": "^4.3.3",
-    "rollup-plugin-node-resolve": "^5.2.0",
+    "@babel/core": "^7.26.0",
+    "@babel/plugin-transform-class-properties": "^7.25.9",
+    "@babel/plugin-transform-object-rest-spread": "^7.25.9",
+    "@babel/preset-env": "^7.26.0",
+    "@babel/preset-typescript": "^7.26.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "@types/react": "^19.0.0",
+    "react": "^19.0.0",
+    "rollup": "^4.28.1",
     "tslint": "^5.18.0",
     "tslint-react": "^4.0.0",
-    "typescript": "^3.5.3"
+    "typescript": "^5.7.2"
   },
   "peerDependencies": {
-    "react": "^16.8.6"
+    "react": "^16.8.6 || 17.x || 18.x || 19.x"
   }
 }
